@@ -1,13 +1,16 @@
-import { Routes } from '@angular/router'
+import { Routes } from "@angular/router";
 
-import { AuthGuard } from './core/guards/auth.guard'
-import { HomeComponent } from './home/home.component'
-import { CharityComponent } from './landing/charity/charity.component'
-
+import { AuthGuard } from "./core/guards/auth.guard";
+import { HomeComponent } from "./home/home.component";
+import { CharityComponent } from "./landing/charity/charity.component";
 
 export const routes: Routes = [
   {
-    path: 'home',
+    path: "",
+    component: CharityComponent,
+  },
+  {
+    path: "home",
     component: CharityComponent,
   },
   // {
@@ -29,4 +32,4 @@ export const routes: Routes = [
   //   loadChildren: () =>
   //     import('./account/auth/auth.route').then((mod) => mod.AUTH_ROUTES),
   // },
-]
+];
