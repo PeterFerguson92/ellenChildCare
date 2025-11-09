@@ -1,37 +1,29 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core'
-import { HeaderComponent } from '@components/header/header.component'
+import { CUSTOM_ELEMENTS_SCHEMA, Component } from "@angular/core";
+import { HeaderComponent } from "@components/header/header.component";
 import {
   LUCIDE_ICONS,
   LucideAngularModule,
   LucideIconProvider,
   icons,
-} from 'lucide-angular'
-import { FreeMode, Pagination, Thumbs } from 'swiper/modules'
-import { SwiperOptions } from 'swiper/types'
-import { HeroComponent } from './hero.component'
-import { JoinComponent } from './join.component'
-import { CounterComponent } from './counter.component'
-import { CausesComponent } from './causes.component'
-import { SwiperComponent } from './swiper.component'
-import { BlogComponent } from './blog.component'
-import { SubscriberComponent } from './subscriber.component'
-import { ContactComponent } from './contact.component'
-import { SwiperDirective } from '@components/swiper-directive.component'
+} from "lucide-angular";
+import { FreeMode, Pagination, Thumbs } from "swiper/modules";
+import { SwiperOptions } from "swiper/types";
+import { HeroComponent } from "./hero.component";
+import { ContactComponent } from "./contact.component";
+import { AboutComponent } from "./about.component";
+import { FaqComponent } from "./faq.component";
 
 @Component({
-  selector: 'app-charity',
+  selector: "app-charity",
   standalone: true,
   imports: [
     HeaderComponent,
+    AboutComponent,
     LucideAngularModule,
-    SwiperDirective,
     HeroComponent,
-    JoinComponent,
-    CounterComponent,
-    CausesComponent,
-    SwiperComponent,
-    BlogComponent,
-    SubscriberComponent,
+
+    FaqComponent,
+
     ContactComponent,
   ],
 
@@ -45,17 +37,9 @@ import { SwiperDirective } from '@components/swiper-directive.component'
     <!-- home page -->
     <app-hero />
     <!-- join sectionn -->
-    <app-join />
-    <!-- counter -->
-    <app-counter />
-    <!-- causes -->
-    <app-causes />
-    <!-- swiper -->
-    <app-swiper />
-    <!-- blog section -->
-    <app-blog />
-    <!-- subscriber -->
-    <app-subscriber />
+    <app-about />
+    <!-- faq section -->
+    <app-faq />
     <!-- contact section -->
     <app-contact />
   `,
@@ -70,12 +54,11 @@ import { SwiperDirective } from '@components/swiper-directive.component'
 })
 export class CharityComponent {
   charity = [
-    { label: 'Home', route: 'home' },
-    { label: 'Join', route: 'join' },
-    { label: 'Causes', route: 'causes' },
-    { label: 'Blog', route: 'blog' },
-    { label: 'Contact', route: 'contact' },
-  ]
+    { label: "Home", route: "home" },
+    { label: "About Us", route: "join" },
+    { label: "faq", route: "faq" },
+    { label: "Contact", route: "contact" },
+  ];
 
   // hoportfolio swiper
   swiperConfig: SwiperOptions = {
@@ -90,12 +73,12 @@ export class CharityComponent {
       disableOnInteraction: false,
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
     },
     navigation: {
-      nextEl: '.button-next',
-      prevEl: '.button-prev',
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
     },
-  }
+  };
 }

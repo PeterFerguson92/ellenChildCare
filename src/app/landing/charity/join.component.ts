@@ -1,14 +1,14 @@
-import { Component } from '@angular/core'
+import { Component } from "@angular/core";
 import {
   LUCIDE_ICONS,
   LucideAngularModule,
   LucideIconProvider,
   icons,
-} from 'lucide-angular'
-import { VideoPlayerComponent } from '@components/video-player.component'
+} from "lucide-angular";
+import { VideoPlayerComponent } from "@components/video-player.component";
 
 @Component({
-  selector: 'app-join',
+  selector: "app-join",
   standalone: true,
   imports: [LucideAngularModule, VideoPlayerComponent],
   providers: [
@@ -20,19 +20,23 @@ import { VideoPlayerComponent } from '@components/video-player.component'
   ],
 
   template: `
-    <section id="join" class="py-10 lg:py-20">
+    <section id="josin" class="py-10 lg:py-20">
       <div class="container">
         <div class="mx-auto max-w-2xl text-center">
           <span
             class="rounded-md border border-primary bg-primary/20 px-3 py-1 text-xs font-medium uppercase tracking-wider text-primary"
-            >Starting with a Child</span
+            >About Us</span
           >
           <h2 class="mt-4 text-3xl/snug font-medium text-default-950">
-            Starting with a Child
+            Where Every Child Is Treated Like an Angel
           </h2>
           <p class="mt-5 text-base">
-            Children growing up in poverty encounter significant challenges
-            education and healthcare, social discrimination, and isolation.
+            With years of experience in early childhood education, our team
+            understands that the early years lay the foundation for lifelong
+            learning. That’s why we focus on creating meaningful experiences
+            through play, creativity, and discovery. From the moment your little
+            one steps through our doors, they’re welcomed into a space filled
+            with warmth, laughter, and care.
           </p>
         </div>
 

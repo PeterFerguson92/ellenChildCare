@@ -1,7 +1,7 @@
-import { Component } from '@angular/core'
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-contact',
+  selector: "app-contact",
   standalone: true,
   imports: [],
   template: `
@@ -30,10 +30,16 @@ import { Component } from '@angular/core'
                     class="m-6 mx-auto max-w-md rounded-xl bg-white/10 p-4 text-center backdrop-blur-xl"
                   >
                     <h2 class="text-4xl/snug font-medium text-white">
-                      Would you like to support our mission?
+                      Reach us anytime at
+                      <a
+                        href="tel:+447884967863"
+                        class="underline hover:text-orange-300 transition"
+                      >
+                        07884967863
+                      </a>
                     </h2>
                     <p class="mt-5 text-base text-white/80">
-                      Complete the form and become a part of our community.
+                      we’d be delighted to speak with you!
                     </p>
                   </div>
                 </div>
@@ -54,7 +60,7 @@ import { Component } from '@angular/core'
                         type="text"
                         class="block w-full rounded-full border-default-200 px-4 py-3 text-base text-default-950 focus:border-default-300 focus:ring-transparent dark:bg-default-50"
                         id="formFirstName"
-                        placeholder="Your first name..."
+                        placeholder="Your Name..."
                         required=""
                       />
                     </div>
@@ -65,7 +71,7 @@ import { Component } from '@angular/core'
                         type="email"
                         class="block w-full rounded-full border-default-200 px-4 py-3 text-base text-default-950 focus:border-default-300 focus:ring-transparent dark:bg-default-50"
                         id="formEmail"
-                        placeholder="Your email..."
+                        placeholder="Your Email..."
                         required=""
                       />
                     </div>
@@ -73,7 +79,7 @@ import { Component } from '@angular/core'
 
                     <div>
                       <input
-                        type="text"
+                        type="textbox"
                         class="block w-full rounded-full border-default-200 px-4 py-3 text-base text-default-950 focus:border-default-300 focus:ring-transparent dark:bg-default-50"
                         id="formSubject"
                         placeholder="Studying Class"
@@ -112,6 +118,55 @@ import { Component } from '@angular/core'
       </div>
       <!-- Container End -->
     </section>
+    <footer class="bg-orange-600 text-white py-10">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-10"
+      >
+        <!-- Business Description (Left Side) -->
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-semibold mb-3">Ellen’s Angel Childcare</h3>
+          <p class="text-white/90 leading-relaxed">
+            A warm, nurturing, and inspiring childcare center where every child
+            is treated like an angel. We provide a safe space for learning,
+            play, and growth — helping little hearts and minds shine bright
+            every day.
+          </p>
+        </div>
+
+        <!-- Contact Info (Right Side) -->
+        <div class="md:w-1/2 md:text-right">
+          <h4 class="text-xl font-semibold mb-3">Contact Us</h4>
+          <p class="text-white/90">
+            118 Hatfield Mead<br />
+            Morden, London, UK<br />
+            SM4 5PG<br />
+          </p>
+          <p class="mt-2">
+            <a
+              href="tel:+447884967863"
+              class="underline hover:text-orange-200 transition"
+              >+44 7884 967863</a
+            ><br />
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Line -->
+      <div
+        class="mt-10 border-t border-white/20 pt-4 text-center text-white/80 text-sm"
+      >
+        2025 © <strong>Ellen’s Angel Childcare.</strong> Crafted and Coded with
+        🤍 by
+        <a
+          href="https://twinmindsolutions.co.uk/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline hover:text-orange-200 transition"
+        >
+          TwinMindSolutions </a
+        >.
+      </div>
+    </footer>
   `,
   styles: ``,
 })

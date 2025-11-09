@@ -194,53 +194,10 @@ import { landing } from '@app/home/data'
                     >
                   </li>
                 }
-                <li class="menu-item group text-default-800 lg:mx-2">
-                  <div
-                    class="hs-dropdown relative inline-flex [--placement:bottom]"
-                  >
-                    <a
-                      class="hs-dropdown-toggle inline-flex items-center rounded-full px-2 py-0.5 text-sm font-medium after:absolute after:inset-0 after:-bottom-20 hover:text-primary lg:text-base"
-                      href="javascript:void(0)"
-                    >
-                      Landing
-                      <lucide-angular
-                        class="mx-1 size-4"
-                        name="chevron-down"
-                      ></lucide-angular>
-                    </a>
 
-                    <div
-                      class="hs-dropdown-menu z-10 mt-4 hidden min-w-48 rounded-lg border border-default-100 bg-white p-1.5 opacity-0 shadow-lg transition-[opacity,margin] hs-dropdown-open:opacity-100 dark:bg-default-50"
-                    >
-                      <ul class="grid grid-cols-2 gap-1">
-                        @for (item of landingName; track $index) {
-                          <li>
-                            <a
-                              class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700"
-                              [routerLink]="item.url"
-                            >
-                              {{ item.title }}</a
-                            >
-                          </li>
-                        }
-                      </ul>
-                    </div>
-                  </div>
-                </li>
               </ul>
             </div>
-            <div class="ms-auto hidden shrink gap-2 lg:inline-flex">
-              <a
-                href="javascript:void(0);"
-                class="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-1.5 text-base text-white transition-all hover:bg-primary-700"
-              >
-                <lucide-icon
-                  name="download-cloud"
-                  class="size-4 fill-white/40"
-                ></lucide-icon>
-                <span class="hidden sm:block">Download</span>
-              </a>
-            </div>
+
           </div>
         </div>
       }
@@ -288,35 +245,7 @@ import { landing } from '@app/home/data'
                 >
               </li>
             }
-            <li class="hs-accordion" id="landing-accordion">
-              <a
-                class="hs-accordion-toggle flex items-center rounded px-4 py-2.5 text-sm font-medium capitalize text-default-900 transition-all duration-300 hover:bg-default-100 hover:text-primary hs-accordion-active:bg-default-400/10 [&.active]:bg-default-100 [&.active]:text-primary"
-                href="javascript:void(0);"
-              >
-                Landing
-                <lucide-angular
-                  name="chevron-down"
-                  class="ms-auto size-5 transition-all hs-accordion-active:rotate-180"
-                ></lucide-angular>
-              </a>
 
-              <div
-                id="landing-accordion"
-                class="hs-accordion-content hidden w-full overflow-hidden transition-[height]"
-              >
-                <ul class="ps-2 pt-2">
-                  @for (item of landingName; track $index) {
-                    <li>
-                      <a
-                        class="flex items-center rounded px-3 py-2 text-sm font-medium text-default-600 transition-all hover:bg-default-400/10 hover:text-default-700 [&.active]:text-primary"
-                        [routerLink]="item.url"
-                        >{{ item.title }}</a
-                      >
-                    </li>
-                  }
-                </ul>
-              </div>
-            </li>
           </ul>
         </nav>
       </div>

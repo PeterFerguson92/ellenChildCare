@@ -1,15 +1,16 @@
-import { Component } from '@angular/core'
+import { Component } from "@angular/core";
 import {
   LUCIDE_ICONS,
   LucideAngularModule,
   LucideIconProvider,
   icons,
-} from 'lucide-angular'
+} from "lucide-angular";
+import { SwiperDirective } from "@components/swiper-directive.component";
 
 @Component({
-  selector: 'app-hero',
+  selector: "app-hero",
   standalone: true,
-  imports: [LucideAngularModule],
+  imports: [LucideAngularModule, SwiperDirective],
   providers: [
     {
       provide: LUCIDE_ICONS,
@@ -19,164 +20,123 @@ import {
   ],
 
   template: `
-    <!-- ======= hero start ======= -->
+    <!-- Hero Section Start -->
     <section
       id="home"
-      class="relative bg-default-100 bg-[url('../images/other/bg-lines-2.png')] bg-cover bg-no-repeat py-24 dark:bg-default-50 dark:bg-[url('../images/other/bg-lines-2-dark.png')] lg:py-32"
+      class="relative flex items-center justify-center overflow-hidden bg-default-100 bg-[url('../images/other/bg-lines-2.png')] bg-cover bg-no-repeat pb-10 pt-24 dark:bg-default-50 dark:bg-[url('../images/other/bg-lines-2-dark.png')] lg:py-28"
     >
-      <div
-        class="flex items-center overflow-hidden before:absolute before:inset-0 before:left-[63.67%] before:hidden before:rounded-bl-3xl before:bg-primary/80 lg:before:block"
-      >
-        <div
-          class="absolute -top-44 bottom-0 right-0 w-2/6 bg-contain bg-right bg-no-repeat"
-          style="background-image: url(assets/images/landing/charity/bg-1.png)"
-        ></div>
-
-        <div class="container">
-          <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-            <div class="">
-              <div class="flex flex-col justify-center">
-                <h2
-                  class="mb-4 text-2xl font-medium text-default-950 sm:text-3xl xl:text-5xl/tight"
-                >
-                  Let's Collaborate and Achieve Greatness Together!
-                </h2>
-                <p class="mt-5 text-base">
-                  Sed consequat, leo eget bibendum sodales, augue velit cursus
-                  nunc, quis gravida magna mi a libero.
-                </p>
-                <div class="mt-10">
-                  <a
-                    href="javascript:void(0);"
-                    class="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-8 py-2 text-base text-white transition-all duration-300 hover:bg-primary-700"
-                    >Read More
-                    <lucide-angular
-                      name="move-right"
-                      class="size-6"
-                    ></lucide-angular>
-                  </a>
-                </div>
-              </div>
-              <!-- flex End -->
-            </div>
-
-            <div class="z-10">
-              <div class="tilt flex items-center gap-4 md:gap-6">
-                <div class="flex w-full flex-col gap-4 md:gap-6">
-                  <img
-                    src="assets/images/landing/charity/img-1.jpg"
-                    class="h-full w-full rounded-lg object-cover"
-                    alt=""
-                  />
-                </div>
-                <div
-                  class="relative flex w-full flex-col gap-4 pb-10 md:gap-6 md:pb-16"
-                >
-                  <img
-                    src="assets/images/landing/charity/img-2.jpg"
-                    class="h-40 w-full rounded-lg object-cover md:h-[278px]"
-                    alt=""
-                  />
-                  <img
-                    src="assets/images/landing/charity/img-3.jpg"
-                    class="h-40 w-full rounded-lg object-cover md:h-[278px]"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <!-- flex End -->
-            </div>
-          </div>
-          <!-- Grid End -->
-        </div>
-        <!-- Container End -->
-      </div>
-    </section>
-    <!-- ======= hero end ======= -->
-
-    <section class="relative -mt-40 py-10 md:-mt-32">
       <div class="container">
-        <div
-          class="mx-auto max-w-6xl rounded-xl bg-gradient-to-t from-default-50 via-default-100 to-default-200 shadow"
-        >
-          <div
-            class="grid divide-y divide-default-300 lg:grid-cols-3 lg:divide-x lg:divide-y-0"
-          >
-            <div class="p-8">
-              <lucide-angular
-                name="book-copy"
-                class="size-12 text-default-950"
-              ></lucide-angular>
-              <h2 class="mt-5 text-xl font-medium text-default-950">
-                Nutritious Meals
+        <div class="relative">
+          <div class="grid items-center gap-6 lg:grid-cols-2">
+            <div class="max-w-xl">
+              <span
+                class="rounded-md border border-primary bg-primary/20 px-3 py-1 text-xs font-medium uppercase tracking-wider text-primary"
+                >Ellen's Angels Childcare</span
+              >
+              <h2
+                class="my-5 text-4xl font-medium text-default-950 md:text-5xl/tight"
+              >
+                Nurturing Little Angels Every Day
               </h2>
-              <p class="mt-4 text-base">
-                Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus.
+              <p class="mb-10 text-base">
+                At Ellen’s Angel Childcare, we provide a warm, safe, and loving
+                environment where every child is encouraged to explore, learn,
+                and grow at their own pace. Our caring educators support each
+                child’s unique journey, helping them build confidence,
+                curiosity, and a lifelong love of learning.
               </p>
-              <div class="group mt-5">
-                <a
-                  href="javascript:void(0);"
-                  class="text-lg font-medium text-default-900"
-                  >Read More
-                  <lucide-angular
-                    name="move-right"
-                    class="inline-block size-6 opacity-0 transition-all duration-500 will-change-transform group-hover:translate-x-2 group-hover:opacity-100"
-                  ></lucide-angular>
-                </a>
-              </div>
+              <a
+                href="javascript:void(0);"
+                class="rounded-md bg-primary px-6 py-3 text-white transition-all duration-300 hover:bg-primary-500"
+                >Reach Out to Us</a
+              >
             </div>
+            <!-- col End -->
 
-            <div class="p-8">
-              <lucide-angular
-                name="send"
-                class="size-12 text-default-950"
-              ></lucide-angular>
-              <h2 class="mt-5 text-xl font-medium text-default-950">
-                Pure Drinking Water
-              </h2>
-              <p class="mt-4 text-base">
-                Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus.
-              </p>
-              <div class="group mt-5">
-                <a
-                  href="javascript:void(0);"
-                  class="text-lg font-medium text-default-900"
-                  >Read More
-                  <lucide-angular
-                    name="move-right"
-                    class="inline-block size-6 opacity-0 transition-all duration-500 will-change-transform group-hover:translate-x-2 group-hover:opacity-100"
-                  ></lucide-angular>
-                </a>
-              </div>
-            </div>
+            <div>
+              <div class="relative">
+                <div class="relative z-10 hidden xl:block">
+                  <div
+                    class="before:absolute before:-end-10 before:-top-10 before:-z-10 before:h-28 before:w-28 before:bg-[url('../images/other/dot.svg')]"
+                  ></div>
+                </div>
 
-            <div class="p-8">
-              <lucide-angular
-                name="book-copy"
-                class="size-12 text-default-950"
-              ></lucide-angular>
-              <h2 class="mt-5 text-xl font-medium text-default-950">
-                Quality Education
-              </h2>
-              <p class="mt-4 text-base">
-                Praesent vestibulum dapibus nibh. Etiam iaculis nunc ac metus.
-              </p>
-              <div class="group mt-5">
-                <a
-                  href="javascript:void(0);"
-                  class="text-lg font-medium text-default-900"
-                  >Read More
-                  <lucide-angular
-                    name="move-right"
-                    class="inline-block size-6 opacity-0 transition-all duration-500 will-change-transform group-hover:translate-x-2 group-hover:opacity-100"
-                  ></lucide-angular>
-                </a>
+                <!-- Slider -->
+                <div
+                  data-hs-carousel='{"loadingClasses": "opacity-0","isAutoPlay": true}'
+                  class="relative z-20"
+                >
+                  <div
+                    class="hs-carousel relative min-h-[350px] w-full overflow-hidden rounded-lg lg:min-h-[650px]"
+                  >
+                    <div
+                      class="hs-carousel-body absolute bottom-0 start-0 top-0 flex flex-nowrap opacity-0 transition-transform duration-700"
+                    >
+                      <div class="hs-carousel-slide">
+                        <img
+                          src="assets/images/landing/startup/img-11.jpg"
+                          alt=""
+                          class="h-full w-full"
+                        />
+                      </div>
+                      <div class="hs-carousel-slide">
+                        <img
+                          src="assets/images/landing/startup/img-12.jpg"
+                          alt=""
+                          class="h-full w-full"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="hidden xl:block">
+                    <button
+                      type="button"
+                      class="hs-carousel-prev hs-carousel:disabled:opacity-50 absolute inset-y-0 start-0 inline-flex h-full w-[46px] -translate-x-1/2 items-center justify-center text-gray-800 disabled:pointer-events-none"
+                    >
+                      <div
+                        class="inline-flex size-10 items-center justify-center rounded-full bg-gray-100 text-primary shadow transition-all hover:bg-primary hover:text-white"
+                      >
+                        <lucide-angular
+                          name="chevron-left"
+                          class="size-6"
+                        ></lucide-angular>
+                      </div>
+                      <span class="sr-only">Previous</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="hs-carousel-next hs-carousel:disabled:opacity-50 absolute inset-y-0 end-0 inline-flex h-full w-[46px] translate-x-1/2 items-center justify-center text-gray-800 disabled:pointer-events-none"
+                    >
+                      <span class="sr-only">Next</span>
+                      <div
+                        class="inline-flex size-10 items-center justify-center rounded-full bg-gray-100 text-primary shadow transition-all hover:bg-primary hover:text-white"
+                      >
+                        <lucide-angular
+                          name="chevron-right"
+                          class="size-6"
+                        ></lucide-angular>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <!-- End Slider -->
+
+                <div class="relative z-10 hidden xl:block">
+                  <div
+                    class="after:absolute after:-bottom-10 after:-start-10 after:-z-10 after:h-28 after:w-28 after:bg-[url('../images/other/dot.svg')]"
+                  ></div>
+                </div>
               </div>
             </div>
+            <!-- col End -->
           </div>
+          <!-- grid End -->
         </div>
       </div>
+      <!-- container End -->
     </section>
+    <!-- Hero Section End -->
   `,
   styles: ``,
 })
