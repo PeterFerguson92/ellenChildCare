@@ -128,7 +128,7 @@ import { Component } from "@angular/core";
           <p class="text-white/90 leading-relaxed">
             A warm, nurturing, and inspiring childcare center where every child
             is treated like an angel. We provide a safe space for learning,
-            play, and growth — helping little hearts and minds shine bright
+            play, and growth. Helping little hearts and minds shine bright
             every day.
           </p>
         </div>

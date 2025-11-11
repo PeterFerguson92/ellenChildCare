@@ -256,13 +256,13 @@ import { LucideAngularModule } from "lucide-angular";
                 alt=""
               />
             </div>
-            <div class="absolute inset-x-0 -bottom-14 hidden sm:block">
+            <!-- <div class="absolute inset-x-0 -bottom-14 hidden sm:block">
               <img
                 src="assets/images/landing/company/img-3.jpg"
                 class="h-full rounded-lg"
                 alt=""
               />
-            </div>
+            </div> -->
           </div>
           <!-- col End -->
         </div>

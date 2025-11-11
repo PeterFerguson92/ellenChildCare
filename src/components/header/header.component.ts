@@ -52,13 +52,9 @@ import { landing } from '@app/home/data'
             <div class="shrink">
               <!-- Navbar Brand Logo -->
               <a routerLink="/">
+
                 <img
-                  src="assets/images/logo-dark.png"
-                  alt="logo"
-                  class="flex h-10 dark:hidden"
-                />
-                <img
-                  src="assets/images/logo-light.png"
+                  src="assets/images/logo.png"
                   alt="logo"
                   class="hidden h-10 dark:flex"
                 />
@@ -148,14 +144,14 @@ import { landing } from '@app/home/data'
               <!-- Navbar Brand Logo -->
               <a routerLink="/">
                 <img
-                  src="assets/images/logo-dark.png"
+                  src="assets/images/logo.png"
                   alt="logo"
-                  class="flex h-10 dark:hidden"
+                  class="flex h-14 dark:hidden"
                 />
                 <img
-                  src="assets/images/logo-light.png"
+                  src="assets/images/logo.png"
                   alt="logo"
-                  class="hidden h-10 dark:flex"
+                  class="hidden h-15 dark:flex"
                 />
               </a>
 

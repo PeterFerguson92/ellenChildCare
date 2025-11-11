@@ -31,13 +31,7 @@ import {
                 alt=""
               />
             </div>
-            <div class="absolute inset-x-0 -bottom-14 hidden sm:block">
-              <img
-                src="assets/images/landing/startup/img-10.jpg"
-                class="h-full rounded-xl"
-                alt=""
-              />
-            </div>
+  
           </div>
           <!-- col End -->
 
