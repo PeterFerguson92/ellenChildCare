@@ -6,12 +6,14 @@ import {
   icons,
 } from "lucide-angular";
 import { SwiperDirective } from "@components/swiper-directive.component";
+import { ScrollToModule, ScrollToService } from "@nicky-lenaers/ngx-scroll-to";
 
 @Component({
   selector: "app-hero",
   standalone: true,
-  imports: [LucideAngularModule, SwiperDirective],
+  imports: [LucideAngularModule, SwiperDirective, ScrollToModule],
   providers: [
+    ScrollToService,
     {
       provide: LUCIDE_ICONS,
       multi: true,
@@ -48,6 +50,7 @@ import { SwiperDirective } from "@components/swiper-directive.component";
               <a
                 href="javascript:void(0);"
                 class="rounded-md bg-primary px-6 py-3 text-white transition-all duration-300 hover:bg-primary-500"
+                [ngxScrollTo]="'contact'"
                 >Reach Out to Us</a
               >
             </div>

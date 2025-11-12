@@ -50,65 +50,69 @@ import { Component } from "@angular/core";
 
             <div>
               <div class="rounded-md bg-default-100 p-8 dark:bg-default-50">
-                <form class="relative">
-                  <h2 class="text-2xl font-medium text-default-950">
+                <form
+                  #contactForm
+                  class="relative"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                  (submit)="onSubmit(contactForm)"
+                >
+                  <!-- Required Access Key -->
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="19d7a6a0-14b4-44de-a231-ebf68b2e920f"
+                  />
+
+                  <!-- Optional anti-spam honeypot -->
+                  <!-- <input type="checkbox" name="botcheck" class="hidden" style="display:none;" /> -->
+
+                  <h2 class="text-2xl font-medium text-default-950 mb-4">
                     Join Us Today!
                   </h2>
+
                   <div class="my-6 space-y-6">
                     <div>
                       <input
+                        name="name"
                         type="text"
                         class="block w-full rounded-full border-default-200 px-4 py-3 text-base text-default-950 focus:border-default-300 focus:ring-transparent dark:bg-default-50"
                         id="formFirstName"
-                        placeholder="Your Name..."
-                        required=""
+                        placeholder="Your Name"
+                        required
                       />
                     </div>
-                    <!-- col End -->
 
                     <div>
                       <input
+                        name="email"
                         type="email"
                         class="block w-full rounded-full border-default-200 px-4 py-3 text-base text-default-950 focus:border-default-300 focus:ring-transparent dark:bg-default-50"
                         id="formEmail"
-                        placeholder="Your Email..."
-                        required=""
+                        placeholder="Your Email"
+                        required
                       />
                     </div>
-                    <!-- col End -->
 
                     <div>
-                      <input
-                        type="textbox"
-                        class="block w-full rounded-full border-default-200 px-4 py-3 text-base text-default-950 focus:border-default-300 focus:ring-transparent dark:bg-default-50"
+                      <textarea
+                        name="message"
+                        class="block w-full rounded-2xl border-default-200 px-4 py-3 text-base text-default-950 focus:border-default-300 focus:ring-transparent dark:bg-default-50"
                         id="formSubject"
-                        placeholder="Studying Class"
-                        required=""
-                      />
+                        placeholder="Message"
+                        rows="4"
+                        required
+                      ></textarea>
                     </div>
-                    <!-- col End -->
-
-                    <div>
-                      <input
-                        type="text"
-                        class="block w-full rounded-full border-default-200 px-4 py-3 text-base text-default-950 focus:border-default-300 focus:ring-transparent dark:bg-default-50"
-                        id="formSubject"
-                        placeholder="Type Your Requirements"
-                        required=""
-                      />
-                    </div>
-                    <!-- col End -->
                   </div>
-                  <!-- grid End -->
 
                   <button
                     type="submit"
-                    class="flex w-full items-center justify-center rounded-full bg-primary py-3 text-base text-white transition-all hover:bg-primary-700"
+                    class="flex w-full items-center justify-center rounded-full bg-orange-600 py-3 text-base text-white transition-all hover:bg-orange-700"
                   >
                     Submit Now
                   </button>
                 </form>
-                <!-- From End -->
               </div>
             </div>
             <!-- col End -->
@@ -128,8 +132,8 @@ import { Component } from "@angular/core";
           <p class="text-white/90 leading-relaxed">
             A warm, nurturing, and inspiring childcare center where every child
             is treated like an angel. We provide a safe space for learning,
-            play, and growth. Helping little hearts and minds shine bright
-            every day.
+            play, and growth. Helping little hearts and minds shine bright every
+            day.
           </p>
         </div>
 
@@ -170,4 +174,12 @@ import { Component } from "@angular/core";
   `,
   styles: ``,
 })
-export class ContactComponent {}
+export class ContactComponent {
+  onSubmit(formEl: HTMLFormElement) {
+    // ✅ Clear the form fields right away
+    formEl.reset();
+
+    // Let Web3Forms continue with normal submission and redirect
+    // No preventDefault() here — we want it to submit normally
+  }
+}
